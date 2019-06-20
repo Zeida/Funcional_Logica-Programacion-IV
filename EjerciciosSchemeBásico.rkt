@@ -93,3 +93,11 @@
 ;;este caso falla
 (display(busca '(1 1 3 4 5 2 3 4) 6 ))
 (display "\n")
+;;función que devuelva el elemento n-ésimo de una lista
+
+(define(enesimo L N)
+        (if(equal? N 1) 
+        (car L)     
+        (enesimo(cdr L)(- N 1))))
+    
+(display(enesimo '(1 1 3 4 5 2 3 4) 6 ))
